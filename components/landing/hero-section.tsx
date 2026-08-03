@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight, ShieldCheck, Sparkles, Users } from "lucide-react";
 
 import { SearchBar } from "@/components/layout/search-bar";
@@ -35,7 +36,12 @@ export function HeroSection() {
           </div>
 
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Button size="lg" className="h-11 rounded-full px-8">
+          <Button
+  size="lg"
+  className="h-11 rounded-full px-8"
+  nativeButton={false}
+  render={<Link href="/browse" />}
+>
               Start browsing
               <ArrowRight className="size-4" />
             </Button>

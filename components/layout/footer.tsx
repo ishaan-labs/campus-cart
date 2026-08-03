@@ -4,10 +4,10 @@ import { Logo } from "@/components/layout/logo";
 
 const footerLinks = {
   marketplace: [
-    { label: "Browse All", href: "#" },
-    { label: "Categories", href: "#categories" },
-    { label: "Featured", href: "#featured" },
-    { label: "Sell an Item", href: "#sell" },
+    { label: "Browse All", href: "/browse" },
+    { label: "Categories", href: "/#categories" },
+    { label: "Featured", href: "/#featured" },
+    { label: "Sell an Item", href: "/#sell" },
   ],
   support: [
     { label: "Help Center", href: "#" },

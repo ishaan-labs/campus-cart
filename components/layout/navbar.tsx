@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Menu } from "lucide-react";
 
 import { Logo } from "@/components/layout/logo";
@@ -16,8 +17,15 @@ export function Navbar() {
           </div>
 
           <div className="ml-auto flex items-center gap-2">
-            <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
-              Browse
+          <Button
+  variant="ghost"
+  size="sm"
+  className="hidden sm:inline-flex"
+  nativeButton={false}
+  render={<Link href="/browse" />}
+>
+  Browse
+
             </Button>
             <Button size="sm" className="rounded-full px-5">
               Log in

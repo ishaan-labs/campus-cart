@@ -8,11 +8,15 @@ import { cn } from "@/lib/utils";
 type SearchBarProps = {
   className?: string;
   placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
 };
 
 export function SearchBar({
   className,
   placeholder = "Search for books, electronics, furniture…",
+  value,
+  onChange,
 }: SearchBarProps) {
   return (
     <div className={cn("relative w-full", className)}>
@@ -20,6 +24,8 @@ export function SearchBar({
       <Input
         type="search"
         placeholder={placeholder}
+        value={value}
+        onChange={(event) => onChange?.(event.target.value)}
         className="h-10 rounded-full border-border/60 bg-muted/40 pl-10 shadow-none focus-visible:bg-background"
         aria-label="Search listings"
       />
